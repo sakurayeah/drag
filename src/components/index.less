@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* tagDrag */
+
+.tag-drag-wrap {
+  margin: 10px;
+  h2 {
+    margin-bottom: 10px;
+  }
+  .top-arr {
+    height: 50px;
+    width: 450px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    .list {
+      float: left;
+      height: 30px;
+      padding: 0 15px;
+      border: 1px dashed #aaa;
+      margin: 8px;
+      border-radius: 4px;
+      line-height: 30px;
+      cursor: move;
+    }
+  }
+  .btm-arr {
+    height: 170px;
+    width: 450px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    margin-top: 15px;
+    border-radius: 8px;
+    .list {
+      position: relative;
+      float: left;
+      height: 30px;
+      padding: 0 15px;
+      border: 1px dashed #aaa;
+      margin: 8px;
+      border-radius: 4px;
+      line-height: 30px;
+      cursor: move;
+      .close {
+        position: absolute;
+        top: 5px;
+        right: 3px;
+        width: 10px;
+        height: 2px;
+        background: #888;
+        line-height: 0;
+        font-size: 0;
+        -webkit-transform: rotate(45deg);
+        cursor: pointer;
+        &:after {
+          content: '/';
+          display: block;
+          width: 10px;
+          height: 2px;
+          background: #888;
+          -webkit-transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+  .recycle-bin {
+    height: 60px;
+    width: 200px;
+    border: 1px solid #aaa;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+}
+
+/* resizeDrag */
+
+.resize-drag-wrap {
+  position: fixed;
+  top: 0;
+  left: 550px;
+  width: 200px;
+  height: 200px;
+  background: #333;
+  color: #fff;
+  .title {
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    cursor: move;
+    user-select: none;
+  }
+  .resize-r {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, .3);
+    cursor: e-resize;
+  }
+  .resize-b {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, .3);
+    cursor: s-resize;
+  }
+  .resize-rb {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, .3);
+    cursor: se-resize;
+  }
+}
+
+/* splitPaneDrag */
+.split-pane-drag-wrap {
+  margin: 10px;
+  .container {
+    /* 不用 float: left 则用下面代码*/
+    // display: flex;
+    // flex-direction: row;
+    border: 1px solid #666;
+    height: 500px;
+    width: 1000px;
+  }
+  .split-col {
+    float: left;
+    width: 3px;
+    height: 100%;
+    background: #fff;
+    cursor: col-resize;
+  }
+  .l-col, .m-col, .r-col {
+    float: left;
+    height: 100%;
+    background: #ccc;
+  }
+  .l-col, .m-col {
+    width: 270px;
+  }
+  .r-col {
+    width: 454px;
+  }
+  .split-row {
+    height: 3px;
+    background: #fff;
+    cursor: row-resize;
+  }
+  .t-row, .m-row, .b-row {
+    background: #ccc;
+  }
+  .t-row, .m-row {
+    height: 170px;
+  }
+  .b-row {
+    height: 154px;
+  }
+}
