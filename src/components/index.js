@@ -1,58 +1,21 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import TagDrag from './tagDrag';
-import ResizegDrag from './resizeDrag';
+import ResizeDrag from './resizeDrag';
 import SplitPaneDrag from './splitPaneDrag';
 
-const topArr = [
-  {
-    id: 1,
-    text: '1'
-  },
-  {
-    id: 2,
-    text: '2'
-  },
-  {
-    id: 3,
-    text: '3'
-  }
-];
-
-const btmArr = [
-  {
-    id: 4,
-    text: '444444'
-  },
-  {
-    id: 5,
-    text: '555555'
-  },
-  {
-    id: 6,
-    text: '666666'
-  },
-  {
-    id: 7,
-    text: '677777'
-  },
-  {
-    id: 8,
-    text: '888888'
-  }
-];
 
 function Home(props) {
   return (
     <div>
       {/* 小标签拖拽 */}
-      <TagDrag topArr={topArr} btmArr={btmArr} />
+      <Link to="/tag">TagDrag</Link>
       <br />
-      <hr />
       {/* 窗口缩放和拖拽任意位置 */}
-      <ResizegDrag />
-      {/* 窗口分割并且可以调节大小 */}
+      <Link to="/resize">ResizeDrag</Link>
       <br />
-      <SplitPaneDrag />
+      {/* 窗口分割并且可以调节大小 */}
+      <Link to="/splitpane">SplitPaneDrag</Link>
     </div>
   )
 }

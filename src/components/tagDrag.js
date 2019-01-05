@@ -1,6 +1,45 @@
 import React from 'react';
 import './index.less';
 
+const topArrProps = [
+  {
+    id: 1,
+    text: '1'
+  },
+  {
+    id: 2,
+    text: '2'
+  },
+  {
+    id: 3,
+    text: '3'
+  }
+];
+
+const btmArrProps = [
+  {
+    id: 4,
+    text: '444444'
+  },
+  {
+    id: 5,
+    text: '555555'
+  },
+  {
+    id: 6,
+    text: '666666'
+  },
+  {
+    id: 7,
+    text: '677777'
+  },
+  {
+    id: 8,
+    text: '888888'
+  }
+];
+
+
 class TagDrag extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +55,9 @@ class TagDrag extends React.Component {
   }
 
   componentDidMount() {
-    const { btmArr = [], topArr = [] } = this.props;
+    // const { btmArr = [], topArr = [] } = this.props;
+    const btmArr = btmArrProps;
+    const topArr = topArrProps;
 
     // 给 btm 的每项添加 arrId
     btmArr.forEach(v => {

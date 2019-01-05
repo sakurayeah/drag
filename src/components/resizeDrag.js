@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.less';
 
-class ResizegDrag extends React.Component {
+class ResizeDrag extends React.Component {
   constructor(props) {
     super(props);
 
@@ -167,4 +167,4 @@ class ResizegDrag extends React.Component {
   }
 }
 
-export default ResizegDrag;
+export default ResizeDrag;
