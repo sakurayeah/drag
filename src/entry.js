@@ -5,6 +5,7 @@ import Home from './components/index';
 import ResizeDrag from './components/resizeDrag';
 import SplitPaneDrag from './components/splitPaneDrag';
 import TagDrag from './components/tagDrag';
+import '../index.html';
 
 ReactDOM.render(
   <HashRouter>

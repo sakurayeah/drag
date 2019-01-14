@@ -28,7 +28,6 @@ spm_modules
 npm-debug
 .gulp
 _tmp
-dist
 www/
 .vscode
 demo/
